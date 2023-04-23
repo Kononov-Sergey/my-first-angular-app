@@ -1,0 +1,15 @@
+<nav>
+  <ul class="flex justify-between text-center">
+    <li *ngFor="let tab of listOfTabs">
+      <button
+        class="w-24"
+        [ngClass]="
+          tab === currentTab ? 'font-semibold border-blue-600 border-b-4' : ''
+        "
+        (click)="currentTab = tab"
+      >
+        {{ tab }}
+      </button>
+    </li>
+  </ul>
+</nav>
