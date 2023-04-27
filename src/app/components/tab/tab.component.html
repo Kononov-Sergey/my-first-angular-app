@@ -1,12 +1,13 @@
-<nav>
-  <ul class="flex justify-between text-center">
+<!-- that mb class should be set from the outside -->
+<nav class="mb-5">
+  <ul class="flex justify-between text-center border-b border-gray-200">
     <li *ngFor="let tab of listOfTabs">
       <button
-        class="w-24"
+        class="w-24 pb-3"
         [ngClass]="
           tab === currentTab ? 'font-semibold border-blue-600 border-b-4' : ''
         "
-        (click)="currentTab = tab"
+        (click)="changeCurrentTabHandler(tab)"
       >
         {{ tab }}
       </button>

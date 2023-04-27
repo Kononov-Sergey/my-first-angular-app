@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '# todo';
+
+  listOfTabs = ['All', 'Active', 'Completed'];
+
+  currentTab = 'All';
+
+  setCurrentTab(tabName: string) {
+    this.currentTab = tabName;
+  }
 }

@@ -3,5 +3,13 @@
     {{ title | uppercase }}
   </h1>
 
-  <app-tab [listOfTabs]="['All', 'Active', 'Completed']"></app-tab>
+  <app-tab
+    [listOfTabs]="listOfTabs"
+    [currentTab]="currentTab"
+    (changeTabEvent)="setCurrentTab($event)"
+  ></app-tab>
+  <div class="flex gap-6">
+    <div class="flex-grow"><app-add-input></app-add-input></div>
+    <app-add-btn></app-add-btn>
+  </div>
 </app-container>
